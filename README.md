@@ -24,8 +24,6 @@ O desafio foi dividido em três etapas:
 
 ## 📊 Modelo Relacional
 
-https://github.com/brunoxbastos/DBAoficinamecanica/blob/main/modelo%20relacional.png
-
 ![Diagrama ER]([imagens/diagrama.png](https://github.com/brunoxbastos/DBAoficinamecanica/blob/main/modelo%20relacional.png))
 
 ## 📸 Tela de Exemplo
