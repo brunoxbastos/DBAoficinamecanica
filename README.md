@@ -30,7 +30,7 @@ https://github.com/brunoxbastos/DBAoficinamecanica/blob/main/modelo%20relacional
 
 ## 📸 Tela de Exemplo
 
-<img src="[imagens/tela.png](https://github.com/brunoxbastos/DBAoficinamecanica/blob/main/modelo%20relacional.png)" alt="Tela" width="600"/>
+<img src="https://github.com/brunoxbastos/DBAoficinamecanica/blob/main/modelo%20relacional.png" alt="Tela" width="600"/>
 
 ---
 
