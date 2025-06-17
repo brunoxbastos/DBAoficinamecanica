@@ -24,7 +24,13 @@ O desafio foi dividido em três etapas:
 
 ## 📊 Modelo Relacional
 
-https://github.com/brunoxbastos/e-comerce_Desafio_DIO/blob/main/modelo%20relacional.png
+https://github.com/brunoxbastos/DBAoficinamecanica/blob/main/modelo%20relacional.png
+
+![Diagrama ER]([imagens/diagrama.png](https://github.com/brunoxbastos/DBAoficinamecanica/blob/main/modelo%20relacional.png))
+
+## 📸 Tela de Exemplo
+
+<img src="[imagens/tela.png](https://github.com/brunoxbastos/DBAoficinamecanica/blob/main/modelo%20relacional.png)" alt="Tela" width="600"/>
 
 ---
 
