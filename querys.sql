@@ -100,5 +100,42 @@ GROUP BY
     l.labor_type
 ORDER BY
     times_performed DESC;
-```
+--6 Veículos que tiveram serviços de "reparo" e "troca" no mesmo ano, ordenados pela data da última ordem de serviço
+SELECT
+    v.plate,
+    v.model,
+    c.full_name AS customer_name,
+    MAX(so.delivery_date) AS last_service_date
+FROM
+    vehicle v
+JOIN customer c ON v.customer_id = c.customer_id
+JOIN service_order so ON v.vehicle_id = so.vehicle_id
+JOIN service_order_service sos ON so.service_order_id = sos.service_order_id
+JOIN service s ON sos.service_id = s.service_id
+JOIN labor l ON s.labor_id = l.labor_id
+WHERE
+    l.labor_type IN ('reparo', 'troca')
+    AND YEAR(so.issue_date) = 2023
+GROUP BY
+    v.vehicle_id, v.plate, v.model, c.full_name
+HAVING
+    COUNT(DISTINCT CASE WHEN l.labor_type = 'reparo' THEN 1 END) > 0
+    AND COUNT(DISTINCT CASE WHEN l.labor_type = 'troca' THEN 1 END) > 0
+ORDER BY
+    last_service_date DESC;
+--7 Clientes que tiveram mais de 3 ordens de serviço e o valor total gasto por eles, ordenado pelo valor total gasto (maior para menor)
+SELECT
+    c.full_name AS customer_name,
+    COUNT(so.service_order_id) AS total_service_orders,
+    SUM(so.total_value) AS total_spent
+FROM
+    customer c
+JOIN
+    service_order so ON c.customer_id = so.customer_id
+GROUP BY
+    c.customer_id, c.full_name
+HAVING
+    COUNT(so.service_order_id) > 3
+ORDER BY
+    total_spent DESC;
 
